@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className+=" js"</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bites &amp; Grills — Abuja Nigeria</title>
+<meta name="description" content="Pizza &amp; Burger cooking in Abuja Nigeria, served properly.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --deep:#241610; --accent:#c8562b; --accent2:#f0c9a8;
+  --ink:#241a15; --wash:#faf5ef; --line:#ebdfd2;
+  --display:'Playfair Display',serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#fff;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,3.4vw,2.4rem);letter-spacing:-.01em}
+h3{font-size:1.15rem;font-family:var(--body);letter-spacing:-.005em}
+p{margin:0 0 1em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+.wrap.narrow{max-width:720px}
+.band{padding:clamp(56px,8vw,104px) 0}
+.band.alt{background:var(--wash)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--deep);color:#fff;overflow:hidden;
+  padding:clamp(72px,12vw,150px) 0 clamp(56px,9vw,110px)}
+.hero::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 90% at 15% 0%,rgba(255,255,255,.13),transparent 60%),
+             radial-gradient(80% 70% at 100% 100%,#c8562b44,transparent 65%)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.16;
+  background-image:linear-gradient(var(--accent2) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--accent2) 1px,transparent 1px);
+  background-size:56px 56px;
+  -webkit-mask-image:radial-gradient(75% 60% at 70% 30%,#000,transparent 72%);
+          mask-image:radial-gradient(75% 60% at 70% 30%,#000,transparent 72%)}
+.hero .wrap{position:relative;z-index:1;max-width:1120px}
+.kicker{display:inline-block;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:600;color:var(--accent2);border:1px solid rgba(255,255,255,.28);
+  padding:.5em 1.1em;border-radius:100px;margin-bottom:1.6rem}
+.hero h1{max-width:16ch;margin-bottom:.35em}
+.hero .lede{max-width:46ch;font-size:clamp(1.05rem,2vw,1.3rem);
+  color:rgba(255,255,255,.82);margin-bottom:2.2rem}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;padding:.95em 1.9em;border-radius:100px;font-weight:600;
+  text-decoration:none;font-size:.98rem;transition:transform .15s ease,opacity .15s ease;
+  border:1px solid transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#241610}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.meta{margin-top:2.6rem;display:flex;flex-wrap:wrap;gap:.6rem 1.8rem;
+  font-size:.9rem;color:rgba(255,255,255,.7)}
+
+/* ---------- content ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.5vw,32px);margin-top:2rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.7rem 1.5rem}
+.card h3{color:var(--deep)}
+.card p{margin:0;color:#5a6068;font-size:.96rem}
+.ticks{list-style:none;padding:0;margin:1.4rem 0 0}
+.ticks li{padding:.8rem 0 .8rem 2rem;border-bottom:1px solid var(--line);position:relative;font-size:1.02rem}
+.ticks li::before{content:"";position:absolute;left:0;top:1.25rem;width:10px;height:10px;
+  border-radius:50%;background:var(--accent)}
+.lead-line{font-size:1.12rem;color:#4c545d;max-width:44ch;margin-top:1.2rem}
+.chips{list-style:none;padding:0;margin:1.6rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem}
+.chips li{border:1px solid var(--line);border-radius:100px;padding:.4em 1em;
+  font-size:.85rem;color:#5a6068;background:#fff}
+.muted{color:#6b7178}
+.hours{border-top:1px solid var(--line);margin-top:1.5rem}
+.hrow{display:flex;justify-content:space-between;gap:2rem;padding:.85rem 0;
+  border-bottom:1px solid var(--line);font-size:1rem}
+.hrow span:first-child{font-weight:600}
+.hrow span:last-child{color:#5a6068;font-variant-numeric:tabular-nums}
+.hours-line{font-size:1.4rem}
+
+/* ---------- photo slots ---------- */
+.slot{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.7rem;min-height:190px;border-radius:16px;border:1.5px dashed var(--line);
+  background:linear-gradient(140deg,var(--wash),#fff);color:#9aa1a8;
+  text-align:center;padding:1.5rem;font-size:.86rem;letter-spacing:.01em}
+.slot-tall{min-height:340px}
+.slot svg{width:34px;height:34px;opacity:.55}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px)}
+
+/* ---------- contact ---------- */
+.contact{background:var(--deep);color:#fff}
+.contact h2{color:#fff}
+.rows{margin-top:1.8rem;border-top:1px solid rgba(255,255,255,.16)}
+.rows a{display:flex;flex-direction:column;gap:.15rem;padding:1.05rem 0;
+  border-bottom:1px solid rgba(255,255,255,.16);text-decoration:none;color:#fff}
+.rows a span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent2)}
+.rows a:hover{color:var(--accent2)}
+.form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);
+  border-radius:18px;padding:clamp(20px,3vw,32px)}
+.form label{display:block;margin-bottom:1rem;font-size:.78rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent2)}
+.form input,.form textarea{width:100%;margin-top:.45rem;padding:.8rem .9rem;
+  border-radius:10px;border:1px solid rgba(255,255,255,.22);background:rgba(0,0,0,.18);
+  color:#fff;font:inherit;font-size:.95rem;text-transform:none;letter-spacing:normal}
+.form input:focus,.form textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.form .btn{width:100%;border:0;cursor:pointer;font:inherit;font-weight:600;margin-top:.4rem}
+
+footer{background:var(--deep);color:rgba(255,255,255,.55);font-size:.85rem;
+  padding:2rem 0 3rem;border-top:1px solid rgba(255,255,255,.12)}
+footer a{color:rgba(255,255,255,.75)}
+
+@media (max-width:860px){
+  .split,.cards,.gallery{grid-template-columns:1fr}
+  .slot-tall{min-height:220px}
+  body{font-size:16px}
+}
+
+/* ==================== effects layer ====================
+   Everything below is presentation only. It is gated on .js so the page is
+   fully readable with scripting off, and every animation is switched off
+   under prefers-reduced-motion at the bottom of this block. */
+
+/* --- language switcher --- */
+.topbar{display:flex;justify-content:flex-end;margin-bottom:1.4rem}
+.langs{display:flex;gap:.2rem;padding:.25rem;border-radius:100px;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.langs a,.langs span{display:block;padding:.4em 1em;border-radius:100px;
+  font-size:.74rem;font-weight:700;letter-spacing:.09em;text-decoration:none;
+  color:rgba(255,255,255,.7);
+  transition:background .25s ease,color .25s ease}
+.langs .on{background:var(--accent);color:#241610}
+.langs a:hover{background:rgba(255,255,255,.16);color:#fff}
+
+/* --- scroll progress rail --- */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;transform:scaleX(0);
+  transform-origin:0 50%;z-index:60;will-change:transform;
+  background:linear-gradient(90deg,var(--accent),var(--accent2))}
+
+/* --- sticky mini header, appears once the hero is gone --- */
+.minibar{position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(255,255,255,.86);border-bottom:1px solid var(--line);
+  backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  transform:translateY(-102%);transition:transform .45s cubic-bezier(.16,.84,.44,1)}
+.minibar.show{transform:none}
+.minibar .wrap{display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding-top:.7rem;padding-bottom:.7rem}
+.mb-name{font-family:var(--display);font-weight:700;color:var(--deep);
+  font-size:1.02rem;letter-spacing:-.01em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.minibar .btn{padding:.6em 1.3em;font-size:.86rem;flex:none}
+
+/* --- hero entrance, staggered --- */
+@keyframes riseIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.js .hero .kicker,.js .hero h1,.js .hero .lede,
+.js .hero .actions,.js .hero .meta{
+  opacity:0;animation:riseIn .9s cubic-bezier(.16,.84,.44,1) forwards}
+.js .hero .kicker{animation-delay:.05s}
+.js .hero h1{animation-delay:.16s}
+.js .hero .lede{animation-delay:.28s}
+.js .hero .actions{animation-delay:.40s}
+.js .hero .meta{animation-delay:.52s}
+
+/* --- living hero: the colour wash drifts, the grid pans --- */
+@keyframes aurora{
+  0%{transform:translate3d(0,0,0) scale(1)}
+  50%{transform:translate3d(-3%,2%,0) scale(1.12)}
+  100%{transform:translate3d(0,0,0) scale(1)}}
+.hero::before{animation:aurora 22s ease-in-out infinite;will-change:transform}
+@keyframes gridPan{
+  from{background-position:0 0,0 0}
+  to{background-position:56px 56px,56px 56px}}
+.hero::after{animation:gridPan 26s linear infinite}
+
+/* --- scroll reveal --- */
+.js .reveal{opacity:0;transform:translateY(20px);transition-delay:var(--d,0ms);
+  transition:opacity .8s cubic-bezier(.16,.84,.44,1),
+             transform .8s cubic-bezier(.16,.84,.44,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* --- section headings draw their own underline --- */
+.band h2{position:relative;padding-bottom:.42em}
+.band h2::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:64px;
+  border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));
+  transition:width .9s cubic-bezier(.16,.84,.44,1) .15s}
+.js .band h2.reveal::after{width:0}
+.js .band h2.reveal.in::after{width:64px}
+
+/* --- cards lift and light up --- */
+.card{position:relative;overflow:hidden;
+  transition:transform .35s cubic-bezier(.16,.84,.44,1),
+             box-shadow .35s ease,border-color .35s ease}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  transform:scaleX(0);transform-origin:0 50%;
+  transition:transform .45s cubic-bezier(.16,.84,.44,1)}
+.card:hover{transform:translateY(-6px);border-color:transparent;
+  box-shadow:0 18px 44px -20px rgba(15,23,42,.34),
+             0 4px 12px -6px rgba(15,23,42,.12)}
+.card:hover::before{transform:none}
+
+/* --- light sweeps across the primary button on hover --- */
+.btn-primary{position:relative;overflow:hidden}
+.btn-primary::after{content:"";position:absolute;top:0;bottom:0;left:-140%;width:60%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-18deg);transition:left .7s cubic-bezier(.16,.84,.44,1)}
+.btn-primary:hover::after{left:150%}
+
+/* --- photo slots: a slow sheen so an empty slot reads as designed,
+       not as something the builder forgot to finish --- */
+.slot{position:relative;overflow:hidden;
+  transition:border-color .35s ease,color .35s ease}
+.slot::after{content:"";position:absolute;top:-60%;bottom:-60%;left:-70%;width:45%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);
+  transform:skewX(-16deg);animation:sheen 5.5s ease-in-out infinite}
+@keyframes sheen{0%{left:-70%}55%{left:150%}100%{left:150%}}
+.slot:hover{border-color:var(--accent);color:#7a828a}
+
+/* --- small interactions --- */
+.chips li{transition:transform .25s ease,border-color .25s ease,color .25s ease}
+.chips li:hover{transform:translateY(-3px);border-color:var(--accent);color:var(--deep)}
+.ticks li::before{transition:transform .3s cubic-bezier(.16,.84,.44,1)}
+.ticks li:hover::before{transform:scale(1.5)}
+.rows a{position:relative;
+  transition:padding-left .3s cubic-bezier(.16,.84,.44,1),color .3s ease}
+.rows a::after{content:"\2192";position:absolute;right:.2rem;top:50%;
+  transform:translateY(-50%);opacity:0;color:var(--accent2);
+  transition:opacity .3s ease,right .3s ease}
+.rows a:hover{padding-left:.6rem}
+.rows a:hover::after{opacity:1;right:0}
+.form input,.form textarea{
+  transition:border-color .25s ease,box-shadow .25s ease}
+.form input:focus,.form textarea:focus{border-color:var(--accent);
+  box-shadow:0 0 0 4px #c8562b33}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important;animation:none!important}
+  .js .reveal{opacity:1!important;transform:none!important}
+  .js .hero .kicker,.js .hero h1,.js .hero .lede,
+  .js .hero .actions,.js .hero .meta{opacity:1}
+  .js .band h2.reveal::after{width:64px}
+  .slot::after{display:none}
+  .progress{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="prog"></div>
+<div class="minibar" id="minibar">
+  <div class="wrap">
+    <span class="mb-name">Bites &amp; Grills</span>
+    <a class="btn btn-primary" href="mailto:bitesandgrills@gmail.com?subject=Reserve%20a%20table">Book a table</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    
+    <span class="kicker">Table reservations</span>
+    <h1>Bites &amp; Grills</h1>
+    <p class="lede">Pizza &amp; Burger cooking in Abuja Nigeria, served properly.</p>
+    <div class="actions"><a class="btn btn-primary" href="mailto:bitesandgrills@gmail.com?subject=Reserve%20a%20table">Book a table</a><a class="btn btn-ghost" href="https://wa.me/2348172892407" rel="noopener">WhatsApp</a></div>
+    <div class="meta">
+      <span>Grace Court Estate, IDU Impresit, Karmo Shop 4, Abuja Nigeria</span>
+      <span>+234 81 728 924 07</span>
+    </div>
+  </div>
+</header>
+
+<section class="band"><div class="wrap split"><div><h2>The kitchen</h2><ul class="ticks"><li>Eat in</li><li>Group bookings</li><li>Takeaway</li><li>Delivery</li></ul><ul class="chips"><li>Wi-Fi</li><li>Outdoor seating</li><li>Takeaway</li><li>Delivery</li></ul></div><div class="slot slot-tall"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="8.5" cy="10" r="1.6" fill="currentColor"/><path d="M4 17l5.2-5 3.4 3.2L16.2 12 20 16.4V18H4z" fill="currentColor"/></svg><span>Food and room photography</span></div></div></section><section class="band alt"><div class="wrap narrow"><h2>Opening hours</h2><div class="hours"><div class="hrow"><span>Mo-Su</span><span>09:00-21:00</span></div></div></div></section><section class="band"><div class="wrap"><div class="gallery"><div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="8.5" cy="10" r="1.6" fill="currentColor"/><path d="M4 17l5.2-5 3.4 3.2L16.2 12 20 16.4V18H4z" fill="currentColor"/></svg><span>your photos drop straight in here</span></div><div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="8.5" cy="10" r="1.6" fill="currentColor"/><path d="M4 17l5.2-5 3.4 3.2L16.2 12 20 16.4V18H4z" fill="currentColor"/></svg><span>your photos drop straight in here</span></div><div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="8.5" cy="10" r="1.6" fill="currentColor"/><path d="M4 17l5.2-5 3.4 3.2L16.2 12 20 16.4V18H4z" fill="currentColor"/></svg><span>your photos drop straight in here</span></div></div></div></section><section class="band contact" id="contact"><div class="wrap split"><div><h2>Reserve a table</h2><div class="rows"><a href="tel:+2348172892407"><span>Call</span>+234 81 728 924 07</a><a href="mailto:bitesandgrills@gmail.com"><span>Email</span>bitesandgrills@gmail.com</a><a href="https://wa.me/2348172892407" rel="noopener"><span>WhatsApp</span>+234 81 728 924 07</a><a href="https://www.google.com/maps/search/?api=1&amp;query=9.0550856,7.3852325" rel="noopener"><span>Open in Maps</span>Grace Court Estate, IDU Impresit, Karmo Shop 4, Abuja Nigeria</a></div></div><div><form class="form" name="enquiry" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="enquiry"><label>Name<input type="text" name="Name"></label><label>Email<input type="email" name="Email"></label><label>Date &amp; time<input type="text" name="Date &amp; time"></label><label>Number of guests<input type="text" name="Number of guests"></label><button type="submit" class="btn btn-primary">Send</button></form></div></div></section>
+
+<footer>
+  <div class="wrap">
+    © 2026 Bites &amp; Grills · <a href="https://samuel-ijeluola.netlify.app" rel="noopener">Site by Samuel Ijeluola</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Tag content for reveal here rather than in the markup, so every section
+     builder gets it for free and none of them have to know about it. */
+  var groups = document.querySelectorAll(".band .wrap > *, .cards .card, .gallery .slot");
+  var seen = new Map();
+  groups.forEach(function(el){
+    el.classList.add("reveal");
+    var p = el.parentNode, i = seen.get(p) || 0;
+    seen.set(p, i + 1);
+    if (i) el.style.setProperty("--d", Math.min(i, 6) * 70 + "ms");
+  });
+
+  if (reduce || !("IntersectionObserver" in window)) {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        e.target.classList.add("in");
+        io.unobserve(e.target);          /* reveal once, never re-hide */
+      });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.08 });
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  }
+
+  /* Progress rail + sticky bar, both off one rAF-throttled scroll handler. */
+  var prog = document.getElementById("prog"),
+      bar  = document.getElementById("minibar"),
+      hero = document.querySelector(".hero"),
+      tick = false;
+
+  function frame(){
+    tick = false;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    if (prog) prog.style.transform = "scaleX(" + (h > 0 ? window.scrollY / h : 0) + ")";
+    if (bar && hero) bar.classList.toggle("show", window.scrollY > hero.offsetHeight - 60);
+  }
+  window.addEventListener("scroll", function(){
+    if (!tick) { tick = true; requestAnimationFrame(frame); }
+  }, { passive: true });
+  frame();
+})();
+</script>
+
+</body>
+</html>
